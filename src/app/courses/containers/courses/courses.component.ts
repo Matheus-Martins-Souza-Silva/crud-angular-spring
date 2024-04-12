@@ -9,7 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatProgressSpinner } from '@angular/material/progress-spinner';
 import { CoursesListComponent } from '../../components/courses-list/courses-list.component';
-import { NgIf, AsyncPipe } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 import { MatToolbar } from '@angular/material/toolbar';
 import { MatCard } from '@angular/material/card';
 
@@ -18,7 +18,7 @@ import { MatCard } from '@angular/material/card';
     templateUrl: './courses.component.html',
     styleUrls: ['./courses.component.scss'],
     standalone: true,
-    imports: [MatCard, MatToolbar, NgIf, CoursesListComponent, MatProgressSpinner, AsyncPipe]
+    imports: [MatCard, MatToolbar, CoursesListComponent, MatProgressSpinner, AsyncPipe]
 })
 export class CoursesComponent {
   courses$: Observable<Course[]> | null = null;
